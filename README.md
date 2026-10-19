@@ -23,10 +23,13 @@ npm run dev
 
 Open http://localhost:3000. Local development uses a SQLite file under `.runtime/`; production requires a remote libSQL database. Cookies are HttpOnly, Secure and SameSite=Strict; modern browsers treat localhost as a secure context.
 
+<<<<<<< HEAD
 ## Vercel function route isolation fix
 
 The standalone `api/session.ts`, `api/sessions.ts`, and `api/pair.ts` functions implement their handlers directly using the shared `lib/session-store.ts` module. They do not import handlers from `app/api/**/route.ts`, avoiding a missing-module error when Vercel packages standalone Node.js Functions separately from Next.js App Router files.
 
+=======
+>>>>>>> 62d4d9c098054b9134891b4186cae39532c63cd4
 ## Vercel deployment
 
 1. Import `jwalith4418-Mj/blackbox-sequential-matching` into the intended Vercel workspace and set **Root Directory** to `frontend`.
@@ -54,4 +57,8 @@ Training, model promotion and benchmark claims remain separate from live synthet
 `npm test` exercises 12 deterministic sessions, 1,200 days, pair explanations, Results/UI flows, all 480 historical records, and real Vercel handlers with a disposable SQLite file through the actual libSQL driver. Handler checks cover secure visitor cookies, forged-header stripping, cross-owner access, same-origin writes, oversized requests, idempotency, competing updates and hidden-data exclusion. Local tests are not a claim of remote Vercel or Turso verification.
 
 The UI tests use a Node VM and mocked transport; browser visual QA remains unverified. See THIRD_PARTY_NOTICES.md and licenses/public-kit.LICENSE for upstream attribution. No blanket license is added to the previously frozen research archive.
+<<<<<<< HEAD
 "# bb" 
+=======
+"# black-box" 
+>>>>>>> 62d4d9c098054b9134891b4186cae39532c63cd4
